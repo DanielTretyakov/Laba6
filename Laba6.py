@@ -118,6 +118,7 @@ def create_worker():
 
     return Worker(name, surname, age)
 
+
 def menu():
     work = None
     boss = None
@@ -148,7 +149,7 @@ def menu():
             input("Нажмите Enter, чтобы продолжить...")
         elif choose == "3":
             if work:
-                worsker = create_worker()
+                worker = create_worker()
                 work.make_worker(worker)
                 print("Сотрудник создан.")
             else:
@@ -178,3 +179,7 @@ def menu():
             break
         else:
             print("Некорректный выбор. Пожалуйста, выберите снова.")
+
+
+if __name__ == "__main__":
+    menu()
